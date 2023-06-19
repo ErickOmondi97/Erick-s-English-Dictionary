@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+  font-family: "Poppins", sans-serif;
+}/*# sourceMappingURL=main.css.map */
