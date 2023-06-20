@@ -1,4 +1,4 @@
-const input = document.getElementById("input");
+const inputEl = document.getElementById("input");
 const infoTextEl = document.getElementById("info-text");
 const meaningContainerEl = document.getElementById("meaning-container");
 const titleEl = document.getElementById("title");
@@ -13,9 +13,9 @@ async function fetchAPI(word){
     meaningContainerEl.style.display = "none";
      
 
-    infoTextEl.innerText = Searching the meaning of "$(word)";
+    infoTextEl.innerText = `Searching the meaning of ${word}`;
     const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
-    const result = await fetch(url).then((res)=> res.JSON());
+    const result = await fetch(url).then((res)=> res.json());
 
     if(result.title){
       meaningContainerEl.style.display = "block";
@@ -34,7 +34,7 @@ async function fetchAPI(word){
       }
   } catch (error) {
     console.log(error);
-    infoTextEl.innerText = an error happened, please check your internet connection;
+    infoTextEl.innerText = `an error happened, please check your internet connection`;
   }
     
 
